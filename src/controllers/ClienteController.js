@@ -19,6 +19,8 @@ module.exports = class ClienteController {
         // Valores recebidos no body
         let { nome, telefone, numberIsWhatsApp } = req.body;
 
+        
+
         // Verifica se os campos foram preenchidos.
         if (!nome || !telefone || !numberIsWhatsApp) {
             return res.status(400).json({ 'message': 'Falha ao validar dados. Tente novamente!' });
