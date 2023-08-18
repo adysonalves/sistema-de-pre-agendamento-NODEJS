@@ -6,11 +6,10 @@ const app = express();
 require('./configs/configApp')(app,express);
 
 // Importa os Models
-require('./models/ListModels')()
+require('./models/ListModels')();
 
-// Rotas
-const ClienteRoutes = require('./routes/ClienteRoutes');
-app.use('/api/cliente', ClienteRoutes);
+// Importa as Rotas
+require('./routes/RouterList')(app);
 
 // Tratamento do erro 404
 app.use((req,res,next) =>{
