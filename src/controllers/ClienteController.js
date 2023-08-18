@@ -25,7 +25,7 @@ module.exports = class ClienteController{
         }
 
         // Regex para verificar se o nome possui caracter especial.
-        let regexNome = /[^a-zA-Z\s]/g;
+        let regexNome = /[^a-zA-Z\sÀ-ÿ]/g;
 
         // Regex para verificar se o numero possui caracters que não sejam números
         let regexTelefone = /\D/g;
